@@ -1,0 +1,16 @@
+#brand-image-nav {
+  width: 12rem;
+}
+a:hover {
+  border-bottom: 2px solid rgb(99, 180, 255);
+  color: rgb(98, 179, 255) !important;
+}
+.nav-item {
+  margin: 0 1rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.active {
+  border-bottom: 2px solid rgb(7, 135, 255);
+  color: rgb(7, 135, 255) !important;
+}
