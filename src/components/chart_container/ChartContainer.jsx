@@ -10,17 +10,10 @@ export default function ChartContainer() {
       labels: dummyData.map((i) => i.Year),
       datasets: [
         {
-          label: "# of Medals",
+          label: "Number of Medals",
           data: dummyData.map((i) => i.Medals),
-          backgroundColor: ["#ffffffa7"],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
-          ],
+          backgroundColor: ["#120024"],
+          borderColor: ["#120024"],
           borderWidth: 1,
         },
       ],
@@ -31,20 +24,37 @@ export default function ChartContainer() {
   }, []);
   return (
     <div>
+      <h3>Medals won by India in Olympics</h3>
       <div>
         <Line
           data={chartData}
           options={{
             responsive: true,
-            title: { text: "THICCNESS SCALE", display: true },
+            title: { text: "MEDALS WON", display: true },
             scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: "Years",
+                  font: {
+                    size: 16,
+                    weight: "bold",
+                  },
+                  padding: { top: 20, left: 0, right: 0, bottom: 0 },
+                },
+              },
+              y: {
+                display: true,
+                title: {
+                  display: true,
+                  text: "Medals",
+                  font: {
+                    size: 16,
+                    weight: "bold",
                   },
                 },
-              ],
+              },
             },
           }}
         />
